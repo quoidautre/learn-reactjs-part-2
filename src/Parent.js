@@ -11,6 +11,7 @@ class Parent extends React.Component {
   }
   
   changeName(newName) {
+    console.log("Parent::changeName(newName): " + newName);
     this.setState({
       name: newName
     });

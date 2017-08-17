@@ -9,6 +9,7 @@ export class Child extends React.Component {
 
   handleChange(e) {
     const name = e.target.value;
+    console.log("Child::handleChange(name): " + name);
     this.props.onChange(name);
   }
 
@@ -16,7 +17,7 @@ export class Child extends React.Component {
     return (
       <div>
         <h1>
-          Hey my name is {this.props.name}!
+          Hey !, my name is {this.props.name}
         </h1>
         <select id="great-names" onChange={this.handleChange}>
           <option value="Frarthur">
