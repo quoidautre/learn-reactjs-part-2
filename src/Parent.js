@@ -1,15 +1,16 @@
 import React from 'react';
 import { Child } from './Child';
+import { Sibling } from './Sibling';
 
 class Parent extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = { name: 'Frarthur' };
-    
+
     this.changeName = this.changeName.bind(this);
   }
-  
+
   changeName(newName) {
     console.log("Parent::changeName(newName): " + newName);
     this.setState({
@@ -26,7 +27,13 @@ class Parent extends React.Component {
       </div>
 
       <p className="App-intro">
-        <Child name={this.state.name} onChange={this.changeName} />
+        <div>
+          <Child
+              onChange={this.changeName} />
+          <Sibling
+              name={this.state.name}
+          />
+        </div>
       </p>
 
     </div>
