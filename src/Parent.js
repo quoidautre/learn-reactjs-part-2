@@ -20,23 +20,10 @@ class Parent extends React.Component {
 
   render() {
     return (
-    <div className="App">
-
-      <div className="App-header">
-        <h2>Welcome to React</h2>
-      </div>
-
-      <p className="App-intro">
         <div>
-          <Child
-              onChange={this.changeName} />
-          <Sibling
-              name={this.state.name}
-          />
+          <Child onChange={this.changeName} />
+          <Sibling name={this.state.name} />
         </div>
-      </p>
-
-    </div>
     )
   }
 }
