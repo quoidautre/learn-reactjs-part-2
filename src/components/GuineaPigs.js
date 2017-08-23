@@ -9,3 +9,7 @@ export const GuineaPigs = (props) => {
         </div>
     );
 }
+
+GuineaPigs.propTypes = {
+    src: React.PropTypes.string.isRequired
+}
